@@ -3,6 +3,9 @@
 #  Android-JioFi-Battery-Notifier 
 Battery Notifier for JioFi Device with battery Icon in Notification and Alerts
 
+## Releases
+https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier/releases/tag/1.3
+
 ## Description
 This is a very small android app with only one purpose. Show percentage notification of battery for JioFi device which is used for access internet with Jio Sim. App will send alerts and notifications on Low battery and Full Battery.
 
