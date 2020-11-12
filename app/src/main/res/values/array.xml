@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="interval">
+        <item>5 Sec</item>
+        <item>10 Sec</item>
+        <item>30 Sec</item>
+        <item>60 Sec</item>
+        <item>2 Min</item>
+        <item>3 Min</item>
+        <item>5 Min</item>
+        <item>10 Min</item>
+    </array>
+    <array name="low">
+        <item>10 %</item>
+        <item>20 %</item>
+        <item>30 %</item>
+        <item>40 %</item>
+        <item>50 %</item>
+        <item>60 %</item>
+    </array>
+    <array name="alerts">
+        <item>On</item>
+        <item>Off</item>
+    </array>
+</resources>

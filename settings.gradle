@@ -1,0 +1,2 @@
+rootProject.name='JioFi Battery Notifier'
+include ':app'
