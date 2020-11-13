@@ -179,7 +179,7 @@
             android:layout_marginTop="10dp"
             android:alpha="0.5"
             android:textColor="@color/colorPrimary"
-            android:text="NOTE\nSudden Increase and Decrease in Battery Level of JioFi are not due to problems in this app.\nThis app only displays what it receives from JioFi.\n\nIf you like the app, Please don't forget to rate."
+            android:text="NOTE\nSudden Increase and Decrease in Battery Level of JioFi are not due to problems in this app.\nThis app only displays what it receives from JioFi."
             android:gravity="center_horizontal"
             />
 
