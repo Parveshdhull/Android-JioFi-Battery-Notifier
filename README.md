@@ -13,12 +13,12 @@ https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier/releases/tag/1.3
 This is a very small android app with only one purpose. Show percentage notification of battery for JioFi device which is used for access internet with Jio Sim. App will send alerts and notifications on Low battery and Full Battery.
 
 #### You can customize these options in the app.
-**Refresh interval** - How fast you want to check the battery percentage.
-<br />**Low Battery Level** - After what level app should you notify that battery is low and you should connect a charger.
-<br />**Low Battery Alerts** - Should app send alerts or only display notification.
-<br />**Alert Sound** - Should app play sound with alerts.
-<br />**Alert Vibrate** - Should app play vibration with alerts.
-<br />**JioFi Panel** - Access JioFi Panel from the app.
+* **Refresh interval** - How fast you want to check the battery percentage.<br />
+* **Low Battery Level** - After what level app should you notify that battery is low and you should connect a charger.<br />
+* **Low Battery Alerts** - Should app send alerts or only display notification.<br />
+* **Alert Sound** - Should app play sound with alerts.<br />
+* **Alert Vibrate** - Should app play vibration with alerts.<br />
+* **JioFi Panel** - Access JioFi Panel from the app.
 
 ## Looking for JioFi Notifier for Windows/Linux?
 https://github.com/Parveshdhull/Miscellaneous/tree/master/JioFi
