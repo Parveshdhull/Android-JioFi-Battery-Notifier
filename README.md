@@ -14,7 +14,7 @@ This is a very small android app with only one purpose. Show percentage notifica
 
 #### You can customize these options in the app.
 * **Refresh interval** - How fast you want to check the battery percentage.<br />
-* **Low Battery Level** - After what level app should you notify that battery is low and you should connect a charger.<br />
+* **Low Battery Level** - After what level app should you notify that battery is low.<br />
 * **Low Battery Alerts** - Should app send alerts or only display notification.<br />
 * **Alert Sound** - Should app play sound with alerts.<br />
 * **Alert Vibrate** - Should app play vibration with alerts.<br />
