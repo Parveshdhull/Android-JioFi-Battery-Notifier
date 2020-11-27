@@ -4,7 +4,7 @@
 Battery Notifier for JioFi Device with battery Icon in Notification and Alerts
 
 ## Releases
-https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier/releases/tag/1.3
+https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier/releases
 
 ## Screenshots
 <img src="images/1.png" alt="Screenshot" height="350"/><img src="images/2.png" alt="Screenshot" height="350"/><img src="images/3.png" alt="Screenshot" height="350"/><img src="images/4.png" alt="Screenshot" height="350"/><img src="images/5.png" alt="Screenshot" height="350"/>
