@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,6 +29,7 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,6 +44,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import java.util.concurrent.Callable;
 
 import espero.jiofibatterynotifier.Classes.SharedPrefMain;
 import espero.jiofibatterynotifier.Classes.StartUpBootReceiver;
@@ -400,5 +405,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         super.onStop();
+    }
+
+    public void about(View view2){
+
+        try {
+            if(!isFinishing()) {
+                View view = (LayoutInflater.from(this)).inflate(R.layout.custom_message_contact, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DialogBoxTheme);
+                builder.setView(view);
+                builder.setCancelable(false);
+                builder.setPositiveButton("Ok",null);
+
+                Dialog dialog = builder.create();
+                dialog.setCancelable(false);
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.show();
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

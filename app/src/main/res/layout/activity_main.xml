@@ -221,6 +221,20 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_boundary"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="About"
+            android:onClick="about"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+
 
 
     </LinearLayout>

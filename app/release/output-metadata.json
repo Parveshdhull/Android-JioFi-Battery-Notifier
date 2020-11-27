@@ -12,7 +12,7 @@
       "filters": [],
       "properties": [],
       "versionCode": 5,
-      "versionName": "1.4",
+      "versionName": "1.5",
       "enabled": true,
       "outputFile": "app-release.apk"
     }
