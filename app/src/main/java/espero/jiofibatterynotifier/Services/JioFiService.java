@@ -196,11 +196,14 @@ public class JioFiService extends Service {
                     boolean charging = true;
                     if (m.find( )) {
                         percentage = m.group(2);
+                        if(response.toLowerCase().contains("discharging")){
+                            charging = false;
+                        }
+                        updateBatteryData(percentage, charging);
+                    }else{
+                        updateNotification("JioFi Not Connected", R.drawable.icon, false);
                     }
-                    if(response.toLowerCase().contains("discharging")){
-                        charging = false;
-                    }
-                    updateBatteryData(percentage, charging);
+
                 }, error -> {
             updateNotification("JioFi Not Connected", R.drawable.icon, false);
 //            Log.d(TAG_FOREGROUND_SERVICE, "URL" + url);
