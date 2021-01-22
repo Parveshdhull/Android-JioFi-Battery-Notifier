@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
-        android:text="Android JioFi Battery Notifier 1.6"
+        android:text="Android JioFi Battery Notifier 1.7"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="18sp" />

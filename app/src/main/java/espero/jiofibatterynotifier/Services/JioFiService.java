@@ -49,7 +49,7 @@ public class JioFiService extends Service {
     private Thread thread;
     private SharedPrefMain sharedPrefMain;
     private RequestQueue queue;
-    private String pattern_string = "(id=\"batterylevel\" value=\")(\\d*)(%\")";
+    private String pattern_string = "(id=\"batterylevel\"\\s*value=\")(\\d*)(%\")";
     private Pattern pattern;
 
     @Override
