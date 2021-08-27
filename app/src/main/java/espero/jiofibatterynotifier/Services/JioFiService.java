@@ -11,12 +11,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.IBinder;
+import android.os.Vibrator;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -55,6 +57,10 @@ public class JioFiService extends Service {
     @Override
     public void onDestroy() {
         try {
+            if (mp != null) {
+                mp.stop();
+                mp = null;
+            }
             if(thread != null && thread.isAlive()){
                 thread.interrupt();
                 thread = null;
@@ -79,6 +85,9 @@ public class JioFiService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        mp = MediaPlayer.create(this, R.raw.low);
+        mp.setLooping(false);
+        mp.setVolume(0.5f, 0.5f);
         sharedPrefMain = new SharedPrefMain(this);
         Log.d(TAG_FOREGROUND_SERVICE, "My foreground service onCreate().");
         IntentFilter intentFilter = new IntentFilter();
@@ -335,12 +344,31 @@ public class JioFiService extends Service {
                         .setContentIntent(pendingIntent).setOnlyAlertOnce(true);
         if(sharedPrefMain.getBoolean("alerts") && playSound &&  ((System.currentTimeMillis() - sharedPrefMain.getLong("notif")) > (1000 * 60 * 5))){
             sharedPrefMain.setLong("notif", System.currentTimeMillis());
-            showAlert(msg);
+            alert();
+//            showAlert(msg);
         }
 
 
         return notificationBuilder.build();
     }
+    private MediaPlayer mp;
+
+    private void alert() {
+        if (sharedPrefMain.getBoolean("vibrate")) {
+            Vibrator vibrator;
+            vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate(500);
+        }
+        if (sharedPrefMain.getBoolean("sound")) {
+            try {
+                if (mp != null) {
+                    mp.start();
+                }
+            } catch (Exception e) {
+            }
+        }
+    }
+
     private void updateNotification(String msg, int icon, boolean playSOund){
         if(!checkWifiOnAndConnected()){
             msg = "JioFi Not Connected";
