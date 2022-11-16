@@ -158,11 +158,16 @@ public class JioFiService extends Service {
 
         if (wifiMgr.isWifiEnabled()) { // Wi-Fi adapter is ON
 
-            WifiInfo wifiInfo = wifiMgr.getConnectionInfo();
+// Disabling extra check of wifi connectivity because,
+// newer version of devices always showing not connected,
+// without location permission
+// Bug: https://issuetracker.google.com/issues/136021574
 
-            if (wifiInfo.getNetworkId() == -1) {
-                return false; // Not connected to an access point
-            }
+//            WifiInfo wifiInfo = wifiMgr.getConnectionInfo();
+//
+//            if (wifiInfo.getNetworkId() == -1) {
+//                return false; // Not connected to an access point
+//            }
             return true; // Connected to an access point
         } else {
             return false; // Wi-Fi adapter is OFF
