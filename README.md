@@ -21,7 +21,7 @@ This is a very small android app with only one purpose. Show percentage notifica
 * **JioFi Panel** - Access JioFi Panel from the app.
 
 ## Looking for JioFi Notifier for Windows/Linux?
-https://github.com/Parveshdhull/Miscellaneous/tree/master/JioFi
+https://github.com/Parveshdhull/Desktop-JioFi-Battery-Notifier
 
 ## YouTube Tutorial
 https://www.youtube.com/watch?v=wx5wmlY35fc
